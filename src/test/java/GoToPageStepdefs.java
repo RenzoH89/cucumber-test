@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
  */
 public class GoToPageStepdefs {
     @Given("^User is on Home Page2$")
-    @Test
     public void userIsOnHomePage() throws Throwable {
         GridClass grid = new GridClass();
 
@@ -16,7 +15,7 @@ public class GoToPageStepdefs {
         Thread.sleep(3000);
         grid.driver.navigate().to("http://otwn.nl/");
         grid.driver.manage().window().maximize();
-        Assert.assertEquals("otwn – Just another WordPress site", grid.driver.getTitle());
+        Assert.assertEquals("otwn – Werkgroep testautomatisering", grid.driver.getTitle());
         grid.driver.findElement(By.xpath("//a[@href='http://otwn.nl/index.php/2016/11/19/hello-world/']")).click();
         Thread.sleep(3000);
 
