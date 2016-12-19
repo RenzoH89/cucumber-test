@@ -50,28 +50,28 @@ formatter.match({
   "location": "GoToPageStepdefs.userIsOnHomePage()"
 });
 formatter.result({
-  "duration": 10976014648,
+  "duration": 11790345756,
   "status": "passed"
 });
 formatter.match({
   "location": "NavigateLoginStepdefs.userNavigateToLogInPage()"
 });
 formatter.result({
-  "duration": 80876,
+  "duration": 130552,
   "status": "passed"
 });
 formatter.match({
   "location": "UserPassStepdefs.userEntersUserNameAndPassword()"
 });
 formatter.result({
-  "duration": 100171,
+  "duration": 103045,
   "status": "passed"
 });
 formatter.match({
   "location": "MessageDisplayStepdefs.messageDisplayedLoginSuccessfully()"
 });
 formatter.result({
-  "duration": 63633,
+  "duration": 98119,
   "status": "passed"
 });
 formatter.uri("sample2.feature");
@@ -126,28 +126,26 @@ formatter.match({
   "location": "ChromeTestStepdefs.userIsOnHomePage()"
 });
 formatter.result({
-  "duration": 13441939470,
-  "status": "passed"
+  "duration": 10538901479,
+  "error_message": "org.junit.ComparisonFailure: expected:\u003cotwn – [Just another WordPress site]\u003e but was:\u003cotwn – [Werkgroep testautomatisering]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat ChromeTestStepdefs.userIsOnHomePage(ChromeTestStepdefs.java:16)\r\n\tat ✽.Given User is on Home Page(sample2.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "NavigateLoginStepdefs.userNavigateToLogInPage()"
 });
 formatter.result({
-  "duration": 47212,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "UserPassStepdefs.userEntersUserNameAndPassword()"
 });
 formatter.result({
-  "duration": 31201,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "MessageDisplayStepdefs.messageDisplayedLoginSuccessfully()"
 });
 formatter.result({
-  "duration": 30791,
-  "status": "passed"
+  "status": "skipped"
 });
 });
