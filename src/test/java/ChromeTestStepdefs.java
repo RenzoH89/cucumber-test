@@ -9,12 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ChromeTestStepdefs {
     @Given("^User is on Home Page$")
     public void userIsOnHomePage() throws Throwable {
+        System.setProperty("webdriver.chrome.driver", "/Users/dvt/git/repos/java-cucumber-project/chromedriver");
         ChromeDriver driver = new ChromeDriver();
         driver.navigate().to("http://otwn.nl/");
         driver.manage().window().maximize();
         Thread.sleep(5000);
-        Assert.assertEquals("otwn – Just another WordPress site", driver.getTitle());
-        driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/?tab=wm']")).click();
+        Assert.assertEquals("otwn – Werkgroep testautomatisering", driver.getTitle());
+        driver.findElement(By.xpath("//a[@href='http://otwn.nl']")).click();
         Thread.sleep(2000);
         //throw new PendingException();
 
