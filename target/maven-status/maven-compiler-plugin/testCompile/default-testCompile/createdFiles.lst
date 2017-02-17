@@ -1,4 +1,5 @@
 GoToPageStepdefs.class
 MessageDisplayStepdefs.class
+RunCucumberTest.class
 NavigateLoginStepdefs.class
 UserPassStepdefs.class
