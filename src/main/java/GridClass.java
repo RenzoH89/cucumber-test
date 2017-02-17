@@ -22,22 +22,16 @@ public class GridClass {
     @BeforeTest
     public void launchbrowser(String browser) throws MalformedURLException {
 
-        if (browser.equalsIgnoreCase("phantomjs")) {
-            node = "http://37.97.206.118:5555/wd/hub";
-            DesiredCapabilities cap = DesiredCapabilities.phantomjs();
-            cap.setBrowserName("phantomjs");
-            cap.setVersion("2.0.0");
+        if (browser.equalsIgnoreCase("chrome")) {
+            node = "http://localhost:5555/wd/hub";
+            DesiredCapabilities cap = DesiredCapabilities.chrome();
+            cap.setBrowserName("chrome");
+            cap.setVersion("56");
             cap.setPlatform(Platform.UNIX);
             driver = new RemoteWebDriver(new URL(node), cap);
 
             // puts an Implicit wait, Will wait for 10 seconds before throwing an exception
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         }
-    }
-
-    @After("@browser")
-    public void tearDown() {
-        // quit driver
-        driver.quit();
     }
 }
