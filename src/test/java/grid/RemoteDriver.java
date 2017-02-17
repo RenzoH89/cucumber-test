@@ -4,24 +4,23 @@ package grid; /**
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.rmi.Remote;
 import java.util.concurrent.TimeUnit;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 
-public class GridClass {
-    public WebDriver driver;
+public class RemoteDriver {
+    public static RemoteWebDriver driver;
     public String node;
 
-    @Parameters("browser")
-    @BeforeTest
-    public void launchbrowser(String browser) throws MalformedURLException {
+    @Before
+    public void launchbrowser() throws MalformedURLException {
 
-        if (browser.equalsIgnoreCase("chrome")) {
-            node = "http://172.17.0.4:5555/wd/hub";
+            node = "http://localhost:5555/wd/hub";
             DesiredCapabilities cap = DesiredCapabilities.chrome();
             cap.setBrowserName("chrome");
             cap.setVersion("56");
@@ -30,6 +29,10 @@ public class GridClass {
 
             // puts an Implicit wait, Will wait for 10 seconds before throwing an exception
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        }
+    }
+
+    @After
+    public void tearDown(){
+        driver.quit();
     }
 }
