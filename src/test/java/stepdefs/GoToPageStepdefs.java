@@ -1,4 +1,5 @@
-import cucumber.api.PendingException;
+package stepdefs;
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -7,6 +8,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import grid.GridClass;
 
 import java.net.MalformedURLException;
 
