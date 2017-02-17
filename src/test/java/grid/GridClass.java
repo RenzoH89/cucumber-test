@@ -21,7 +21,7 @@ public class GridClass {
     public void launchbrowser(String browser) throws MalformedURLException {
 
         if (browser.equalsIgnoreCase("chrome")) {
-            node = "http://localhost:5555/wd/hub";
+            node = "http://172.17.0.3:5555/wd/hub";
             DesiredCapabilities cap = DesiredCapabilities.chrome();
             cap.setBrowserName("chrome");
             cap.setVersion("56");
