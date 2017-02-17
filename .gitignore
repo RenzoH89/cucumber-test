@@ -1,1 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/inspectionProfiles/
+target/cucumber-html-report/
+target/generated-test-sources/
+target/surefire-reports/
+target/test-classes/
+
+.idea/workspace.xml
