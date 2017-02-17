@@ -1,10 +1,9 @@
-package grid; /**
+package driver; /**
  * Created by dto21215 on 25-11-2016.
  */
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.rmi.Remote;
 import java.util.concurrent.TimeUnit;
 
 import cucumber.api.java.After;
