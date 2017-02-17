@@ -12,5 +12,5 @@ import cucumber.api.junit.Cucumber;
         plugin = {"pretty", "html:target/cucumber-html-report"},
         tags = {}
 )
-public class RunCucumberTests {
+public class RunCucumberTest {
 }
